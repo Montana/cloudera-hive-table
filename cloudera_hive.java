@@ -4,7 +4,6 @@ import org.apache.hadoop.fs.FileSystem
 
 trait Config {
   val conf = new Configuration()
-  //Set dynamic value by using this --> conf.set("fs.defaultFS", "hdfs://quickstart.cloudera:8020")
   conf.set("fs.defaultFS", "hdfs://172.17.0.2:8020")
   val fs: FileSystem = FileSystem.get(conf)
 
